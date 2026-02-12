@@ -1,5 +1,5 @@
 ==============================================================================
-USER GUIDE: DIGITAL PEER SUPPORT SYSTEM (v2.0)
+USER GUIDE: DIGITAL PEER SUPPORT SYSTEM 
 ==============================================================================
 
 This document contains step-by-step instructions to set up the environment, 
@@ -18,7 +18,7 @@ STEP 0: ACCESS LIVE SYSTEM (RENDERED)
 ------------------------------------------------------------------------------
 You can access the fully functional, live version of the system here:
 
-Live URL: https://peer-support-app.onrender.com
+Live URL:  https://seproject-digitalpeersupportsystem.onrender.com
 
 ------------------------------------------------------------------------------
 STEP 1: DATABASE SETUP
