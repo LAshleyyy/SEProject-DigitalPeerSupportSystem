@@ -28,11 +28,11 @@ app.secret_key = 'digital_peer_support_secret'
 # ==========================================
 
 db_config = {
-    'host' : os.getenv("DB_HOST"),
-    'port' : os.getenv("DB_PORT"),
-    'user' : os.getenv("DB_USER"),
-    'password' : os.getenv("DB_PASSWORD"),
-    'database' : os.getenv("DB_NAME"),
+    'host': os.environ.get('DB_HOST', 'localhost'),
+    'user': os.environ.get('DB_USER', 'root'),
+    'password': os.environ.get('DB_PASSWORD', '#peersupport'),
+    'database': os.environ.get('DB_NAME', 'peer_support_db'),
+    'port': int(os.environ.get('DB_PORT', 3306)) 
 }
 
 cloudinary.config(
@@ -47,7 +47,7 @@ cloudinary.config(
 # ==========================================
 SMTP_SERVER = "smtp.gmail.com"  # Google's SMTP server
 SMTP_PORT = 587                 # TLS Port
-SENDER_EMAIL = "fatinshamirah212@gmail.com" 
+SENDER_EMAIL = "al2024059@gmail.com" 
 SENDER_PASSWORD = "vwowfvevwnjonkcu" # App Pass 
 
 # ==========================================
