@@ -371,6 +371,8 @@ CREATE TABLE ExportData (
 -- SEED DATA (PRODUCTION ALIGNED)
 -- ==============================================================================
 
+SET FOREIGN_KEY_CHECKS=0;
+
 INSERT INTO Account (account_id, username, password, role) VALUES 
 (1, 'admin', '123', 'admin'),
 (2, 'mod', '123', 'moderator'),
