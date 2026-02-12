@@ -28,11 +28,12 @@ app.secret_key = 'digital_peer_support_secret'
 # ==========================================
 
 db_config = {
-    'host': os.environ.get('DB_HOST', 'localhost'),
-    'user': os.environ.get('DB_USER', 'root'),
-    'password': os.environ.get('DB_PASSWORD', '211521'),
-    'database': os.environ.get('DB_NAME', 'peer_support_db'),
-    'port': int(os.environ.get('DB_PORT', 3306)) 
+    'host' : os.getenv("DB_HOST"),
+    'port' : os.getenv("DB_PORT"),
+    'user' : os.getenv("DB_USER"),
+    'password' : os.getenv("DB_PASSWORD"),
+    'database' : os.getenv("DB_NAME"),
+    'ssl_disabled': False 
 }
 
 cloudinary.config(
