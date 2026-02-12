@@ -3,12 +3,12 @@ import os
 
 # Your Aiven Database Configuration
 db_config = {
-    'host': 'peer-support-system-fatinshamirah212-93b4.j.aivencloud.com',
-    'user': 'avnadmin',
-    'password': 'AVNS_qclUfTKSrqQyzmN9pz4',
-    'database': 'defaultdb',
-    'port': 26591,
-    'ssl_disabled': False
+    hostos.getenv("DB_HOST"),
+    port=os.getenv("DB_PORT"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME"),
+    ssl_disabled=False
 }
 
 def inspect_database():
