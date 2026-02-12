@@ -1,13 +1,17 @@
 import mysql.connector
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Your Aiven Database Configuration
 db_config = {
-    'host': 'mysql-32ac44cf-al2024059-5ce9.b.aivencloud.com',
-    'user': 'avnadmin',
-    'password': 'AVNS_0xJnCE4dtlXYW5AGwm8',
-    'database': 'defaultdb',
-    'port': 16265,
+
+    'host' : os.getenv("DB_HOST"),
+    'port' : os.getenv("DB_PORT"),
+    'user' : os.getenv("DB_USER"),
+    'password' : os.getenv("DB_PASSWORD"),
+    'database' : os.getenv("DB_NAME"),
     'ssl_disabled': False 
 }
 

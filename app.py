@@ -15,6 +15,9 @@ from datetime import datetime
 import mysql.connector
 from mysql.connector import Error
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # initialize Flask application
 app = Flask(__name__)
