@@ -15,6 +15,23 @@ db_config = {
     'ssl_disabled': False 
 }
 
+with open("db_schema.sql", "r") as f:
+    sql_commands = f.read().split(';')  # split by semicolon
+
+conn = mysql.connector.connect(**db_config)
+cursor = conn.cursor()
+
+for cmd in sql_commands:
+    cmd = cmd.strip()
+    if cmd:
+        cursor.execute(cmd)
+
+conn.commit()
+cursor.close()
+conn.close()
+
+print("Database initialized!")
+
 def inspect_database():
     try:
         print("🔌 Connecting to Aiven Database...")
@@ -63,3 +80,4 @@ def inspect_database():
 
 if __name__ == "__main__":
     inspect_database()
+
